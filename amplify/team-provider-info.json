@@ -1,0 +1,21 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-notadog-dev-135209-authRole",
+      "UnauthRoleArn": "arn:aws:iam::287488131926:role/amplify-notadog-dev-135209-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::287488131926:role/amplify-notadog-dev-135209-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-notadog-dev-135209-deployment",
+      "UnauthRoleName": "amplify-notadog-dev-135209-unauthRole",
+      "StackName": "amplify-notadog-dev-135209",
+      "StackId": "arn:aws:cloudformation:us-east-2:287488131926:stack/amplify-notadog-dev-135209/147afee0-9e50-11ec-872e-02b7f531d7f4",
+      "AmplifyAppId": "dem48rav9m7sy"
+    },
+    "categories": {
+      "auth": {
+        "notadog5dbb97bd": {},
+        "true": {}
+      }
+    }
+  }
+}
