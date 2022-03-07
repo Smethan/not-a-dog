@@ -8,6 +8,7 @@ const DogForm = () => {
   const [inputFile, setInputFile] = useState();
   const [previewFile, setPreviewFile] = useState();
   const [isDog, setIsDog] = useState(true);
+  const [isCalculating, setIsCalculating] = useState(false);
   useEffect(() => {
     setInputFile(document.getElementById("myInput"));
   }, []);
@@ -18,6 +19,7 @@ const DogForm = () => {
     //Insert AWS code stuff here
 
     let labelArray = [];
+    setIsCalculating(true);
     Predictions.identify({
       labels: {
         source: {
@@ -33,6 +35,7 @@ const DogForm = () => {
           const { name } = object;
           labelArray.push(name);
         });
+        setIsCalculating(false);
         setIsDog(labelArray.includes("Dog"));
       })
       .catch((err) => console.log({ err }));
@@ -70,7 +73,9 @@ const DogForm = () => {
             Is it a Dog?
           </h1>
 
-          {isDog ? (
+          {isCalculating ? (
+            <h4 style={{ color: "grey" }}>Calculating...</h4>
+          ) : isDog ? (
             <h4 style={{ color: "green" }}>Yes, it is a dog!</h4>
           ) : (
             <h4 style={{ color: "red" }}>No, it is not a dog!</h4>
