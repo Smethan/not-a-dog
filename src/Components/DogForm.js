@@ -52,19 +52,23 @@ const DogForm = () => {
           <div
             className="page-header"
             style={{
-              backgroundColor: "cyan",
-              paddingTop: "2px",
-              paddingBottom: "2px",
+              backgroundColor: "#40798C",
+              paddingTop: "1vh",
+              paddingBottom: "1vh",
+              color: "#0b2027",
             }}
           >
-            <h1 style={{ marginLeft: "5px" }}>Dog or Not!</h1>
+            <h1 style={{ marginLeft: "1vw", fontWeight: "bold" }}>
+              Dog or Not!
+            </h1>
           </div>
         </div>
       </div>
       <div className="row">
-        <div className="col-md-3"></div>
-        <div className="col-md-6">
-          <h1 className="text-center">Is it a Dog?</h1>
+        <div className="col-md-12">
+          <h1 className="text-center" style={{ color: "#0b2027" }}>
+            Is it a Dog?
+          </h1>
 
           {isDog ? (
             <h4 style={{ color: "green" }}>Yes, it is a dog!</h4>
@@ -74,19 +78,29 @@ const DogForm = () => {
 
           <div
             style={{
-              display: "flex",
-              flexDirection: "row",
-              maxHeight: "60vh",
+              display: "block",
+              height: "65vh",
+              width: "80vw",
               justifyContent: "center",
+              margin: "0 auto",
             }}
           >
             <img
               src={previewFile ? previewFile : goldenretriever}
-              style={{ objectFit: "scale-down" }}
+              style={{
+                objectFit: "contain",
+                width: "100%",
+                height: "100%",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
             />
           </div>
           <br />
-          <div className="d-grid gap-2">
+          <div
+            className="d-grid gap-2"
+            style={{ marginLeft: "20vw", marginRight: "20vw" }}
+          >
             <Button
               type="button"
               variant="primary"
@@ -106,7 +120,6 @@ const DogForm = () => {
             />
           </div>
         </div>
-        <div className="col-md-3"></div>
       </div>
     </div>
   );
