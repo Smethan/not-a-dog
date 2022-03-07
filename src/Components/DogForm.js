@@ -76,9 +76,9 @@ const DogForm = () => {
           {isCalculating ? (
             <h4 style={{ color: "grey" }}>Calculating...</h4>
           ) : isDog ? (
-            <h4 style={{ color: "green" }}>Yes, it is a dog!</h4>
+            <h4 style={{ color: "green" }}>Yes, it is (probably) a dog!</h4>
           ) : (
-            <h4 style={{ color: "red" }}>No, it is not a dog!</h4>
+            <h4 style={{ color: "red" }}>No, it is (probably) not a dog!</h4>
           )}
 
           <div
